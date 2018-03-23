@@ -27,4 +27,25 @@ selectedLog = this.logSource.asObservable();
      this.logSource.next(log);
    }
 
+   addLog(log:Log){
+     this.logs.unshift(log);
+   }
+
+   updateLog(log){
+     this.logs.forEach((item,index)=>{
+       if(log.id === item.id){
+         this.logs.splice(index,1);
+       }
+     })
+     this.logs.unshift(log);
+   }
+
+   deleteLog(log){
+     this.logs.forEach((item,index)=>{
+       if(log.id === item.id){
+         this.logs.splice(index,1);
+       }
+     })
+   }
+
 }

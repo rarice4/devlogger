@@ -19,5 +19,10 @@ logs:Log[];
   onSelect(log: Log){
     this.logService.setFormLog(log);
   }
+  onDelete(log: Log){
+    if (confirm('are you sure?')){
+      this.logService.deleteLog(log);
+    }
+  }
 
 }
