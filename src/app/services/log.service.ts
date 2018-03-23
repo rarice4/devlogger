@@ -19,8 +19,8 @@ selectedLog = this.logSource.asObservable();
     ]
    }
 
-   getLogs(){
-     return this.logs;
+   getLogs():Observable<Log[]>{
+     return of(this.logs);
    }
 
    setFormLog(log: Log){
