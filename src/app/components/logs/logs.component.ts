@@ -16,5 +16,8 @@ logs:Log[];
   ngOnInit() {
     this.logs = this.logService.getLogs();
   }
+  onSelect(log: Log){
+    console.log(log);
+  }
 
 }
