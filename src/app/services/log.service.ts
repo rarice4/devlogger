@@ -52,6 +52,8 @@ stateClear = this.stateSource.asObservable();
        }
      })
      this.logs.unshift(log);
+     //update local sotrage
+     localStorage.setItem('logs', JSON.stringify(this.logs));
    }
 
    deleteLog(log){
@@ -59,7 +61,9 @@ stateClear = this.stateSource.asObservable();
        if(log.id === item.id){
          this.logs.splice(index,1);
        }
-     })
+     });
+     // delete from local storage
+     localStorage.setItem('logs', JSON.stringify(this.logs));
    }
 
    clearState(){
