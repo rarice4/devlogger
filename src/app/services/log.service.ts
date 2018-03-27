@@ -14,6 +14,7 @@ selectedLog = this.logSource.asObservable();
 private stateSource = new BehaviorSubject<boolean>(true);
 stateClear = this.stateSource.asObservable();
   constructor() {
+    
     // this.logs = [
     //   {id:'1', text: 'Gen components', date: new Date("12/26/2017")},
     //   {id:'2', text: 'added components', date: new Date("12/27/2017")},
